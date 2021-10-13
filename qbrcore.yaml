@@ -1,7 +1,7 @@
 $engine: 3
 $onesync: on
 name: QBCore Framework RedM
-version: 0.0.2
+version: 0.1.1
 author: BerkieB & SyZzO
 description: An advanced RedM RP framework including jobs, gangs, housing & more!
 
@@ -11,14 +11,6 @@ tasks:
     src: https://github.com/qbcore-redm-framework/txAdminRecipe
     ref: main
     dest: ./tmp/qbrcore
-    
-  - action: move_path
-    src: ./tmp/qbrcore/LICENSE
-    dest: ./tmp/unused/LICENSE
-    
-  - action: move_path
-    src: ./tmp/qbrcore/README.md
-    dest: ./tmp/unused/README.md
 
   - action: move_path
     src: ./tmp/qbrcore/server.cfg
@@ -31,9 +23,15 @@ tasks:
   # Prepare Database
   - action: connect_database
   - action: query_database
-    file: ./tmp/qbrcore/qbcore.sql
+    file: ./tmp/qbrcore/qbrcore.sql
+
 
   # Downloading Standalone Resources
+  - action: download_github
+    src: https://github.com/citizenfx/cfx-server-data
+    subpath: resources
+    dest: ./resources/[cfx-default]
+  
   - action: download_file
     path: ./tmp/files/oxmysql-1.5.1.zip
     url: https://github.com/overextended/oxmysql/releases/download/v1.5.1/oxmysql-v1.5.1.zip
@@ -50,12 +48,6 @@ tasks:
     dest: ./resources/[standalone]/progressbar
     ref: main
     src: https://github.com/qbcore-redm-framework/progressbar
-
-  - action: download_github
-    src: https://github.com/citizenfx/cfx-server-data
-    ref: master
-    subpath: resources
-    dest: ./resources/[cfx-default]
 
   # Download QBCore resources
   - action: download_github
