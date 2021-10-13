@@ -134,9 +134,6 @@ tasks:
     src: https://github.com/qbcore-redm-framework/qbr-weathersync
     ref: main
     dest: ./resources/[qbr]/qbr-weathersync
-    
-  - action: waste_time # prevent github throttling
-    seconds: 10
 
   - action: download_github
     src: https://github.com/qbcore-redm-framework/qbr-clothing
