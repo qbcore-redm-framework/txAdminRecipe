@@ -1,52 +1,39 @@
 $engine: 3
 $onesync: on
 name: QBCore Framework RedM
-version: 0.0.1
-author: BerkieB
+version: 0.0.2
+author: BerkieB & SyZzO
 description: An advanced RedM RP framework including jobs, gangs, housing & more!
 
 tasks:
-  # Download Base Files and QBCore resources
+  # Download Base Files
   - action: download_github
-    src: https://github.com/qbcore-framework/qbcore-redmproject
-    dest: ./resources
+    src: https://github.com/qbcore-redm-framework/txAdminRecipe
+    ref: main
+    dest: ./tmp/qbrcore
     
   - action: move_path
-    src: ./resources/txAdminRecipeRedM
-    dest: ./tmp/txAdminRecipeRedM
-    
-  - action: move_path
-    src: ./resources/LICENSE
+    src: ./tmp/qbrcore/LICENSE
     dest: ./tmp/unused/LICENSE
     
   - action: move_path
-    src: ./resources/README.md
+    src: ./tmp/qbrcore/README.md
     dest: ./tmp/unused/README.md
-    
-  - action: move_path
-    src: ./resources/.gitignore
-    dest: ./tmp/unused/.gitignore
 
   - action: move_path
-    src: ./tmp/txAdminRecipeRedM/server.cfg
+    src: ./tmp/qbrcore/server.cfg
     dest: ./server.cfg
 
   - action: move_path
-    src: ./tmp/txAdminRecipeRedM/myLogo.png
+    src: ./tmp/qbrcore/myLogo.png
     dest: ./myLogo.png
 
   # Prepare Database
   - action: connect_database
   - action: query_database
-    file: ./tmp/txAdminRecipeRedM/qbcore.sql
-
+    file: ./tmp/qbrcore/qbcore.sql
 
   # Downloading Standalone Resources
-  - action: download_github
-    src: https://github.com/citizenfx/cfx-server-data
-    subpath: resources
-    dest: ./resources/[cfx-default]
-
   - action: download_file
     path: ./tmp/files/oxmysql-1.5.1.zip
     url: https://github.com/overextended/oxmysql/releases/download/v1.5.1/oxmysql-v1.5.1.zip
@@ -59,6 +46,108 @@ tasks:
     ref: master
     src: https://github.com/qbcore-framework/connectqueue
     
+  - action: download_github
+    dest: ./resources/[standalone]/progressbar
+    ref: main
+    src: https://github.com/qbcore-redm-framework/progressbar
+
+  - action: download_github
+    src: https://github.com/citizenfx/cfx-server-data
+    ref: master
+    subpath: resources
+    dest: ./resources/[cfx-default]
+
+  # Download QBCore resources
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-ambulancejob
+    ref: main
+    dest: ./resources/[qbr]/qbr-ambulancejob
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-banking
+    ref: main
+    dest: ./resources/[qbr]/qbr-banking
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-core
+    ref: main
+    dest: ./resources/[qbr]/qbr-core
+  
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-crafting
+    ref: main
+    dest: ./resources/[qbr]/qbr-crafting
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-doorlock
+    ref: main
+    dest: ./resources/[qbr]/qbr-doorlock
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-hud
+    ref: main
+    dest: ./resources/[qbr]/qbr-hud
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-inventory
+    ref: main
+    dest: ./resources/[qbr]/qbr-inventory
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-logs
+    ref: main
+    dest: ./resources/[qbr]/qbr-logs
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-multicharacter
+    ref: main
+    dest: ./resources/[qbr]/qbr-multicharacter
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-policejob
+    ref: main
+    dest: ./resources/[qbr]/qbr-policejob
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-prompts
+    ref: main
+    dest: ./resources/[qbr]/qbr-prompts
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-scoreboard
+    ref: main
+    dest: ./resources/[qbr]/qbr-scoreboard
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-shops
+    ref: main
+    dest: ./resources/[qbr]/qbr-shops
+  
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-smallresources
+    ref: main
+    dest: ./resources/[qbr]/qbr-smallresources
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-spawn
+    ref: main
+    dest: ./resources/[qbr]/qbr-spawn
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-weapons
+    ref: main
+    dest: ./resources/[qbr]/qbr-weapons
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-weathersync
+    ref: main
+    dest: ./resources/[qbr]/qbr-weathersync
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-clothing
+    ref: main
+    dest: ./resources/[qbr]/qbr-clothing
+
   # Clean up
   - action: remove_path
     path: ./tmp
