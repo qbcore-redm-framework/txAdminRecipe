@@ -1,7 +1,7 @@
 $engine: 3
 $onesync: on
 name: QBCore Framework RedM
-version: 0.1.2
+version: 0.1.3
 author: BerkieB & SyZzO
 description: An advanced RedM RP framework including jobs, gangs, housing & more!
 
@@ -33,11 +33,11 @@ tasks:
     dest: ./resources/[cfx-default]
   
   - action: download_file
-    path: ./tmp/files/oxmysql-1.6.1.zip
-    url: https://github.com/overextended/oxmysql/releases/download/v1.6.1/oxmysql-v1.6.1.zip
+    path: ./tmp/files/oxmysql-1.6.2.zip
+    url: https://github.com/overextended/oxmysql/releases/download/v1.6.2/oxmysql-v1.6.2.zip
   - action: unzip
     dest: ./resources/[standalone]
-    src: ./tmp/files/oxmysql-1.6.1.zip
+    src: ./tmp/files/oxmysql-1.6.2.zip
     
   - action: download_github
     dest: ./resources/[standalone]/connectqueue
