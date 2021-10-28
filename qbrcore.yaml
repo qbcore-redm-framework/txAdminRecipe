@@ -48,7 +48,12 @@ tasks:
     dest: ./resources/[standalone]/progressbar
     ref: main
     src: https://github.com/qbcore-redm-framework/progressbar
-
+      
+  - action: download_github
+    dest: ./resources/[standalone]/notificationsystem
+    ref: main
+    src: https://github.com/qbcore-redm-framework/notificationsystem
+    
   # Download QBCore resources
   - action: download_github
     src: https://github.com/qbcore-redm-framework/qbr-ambulancejob
@@ -139,7 +144,12 @@ tasks:
     src: https://github.com/qbcore-redm-framework/qbr-clothing
     ref: main
     dest: ./resources/[qbr]/qbr-clothing
-
+    
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-lockpick
+    ref: main
+    dest: ./resources/[qbr]/qbr-lockpick
+  
   # Clean up
   - action: remove_path
     path: ./tmp
