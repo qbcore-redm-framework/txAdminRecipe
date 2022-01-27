@@ -54,6 +54,11 @@ tasks:
     ref: main
     src: https://github.com/qbcore-redm-framework/notificationsystem
     
+  - action: download_github
+    dest: ./resources/[standalone]/PolyZone
+    ref: master
+    src: https://github.com/nerohiro/PolyZone
+    
   # Download QBCore resources
   - action: download_github
     src: https://github.com/qbcore-redm-framework/qbr-ambulancejob
