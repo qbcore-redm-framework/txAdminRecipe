@@ -79,11 +79,6 @@ tasks:
     src: https://github.com/qbcore-redm-framework/qbr-core
     ref: main
     dest: ./resources/[qbr]/qbr-core
-  
-  - action: download_github
-    src: https://github.com/qbcore-redm-framework/qbr-crafting
-    ref: main
-    dest: ./resources/[qbr]/qbr-crafting
 
   - action: download_github
     src: https://github.com/qbcore-redm-framework/qbr-doorlock
