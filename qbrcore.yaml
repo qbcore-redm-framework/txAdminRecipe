@@ -55,6 +55,11 @@ tasks:
     src: https://github.com/qbcore-redm-framework/notificationsystem
     
   - action: download_github
+    dest: ./resources/[standalone]/PolyZone
+    ref: master
+    src: https://github.com/nerohiro/PolyZone
+
+  - action: download_github
     dest: ./resources/[standalone]/pma-voice
     ref: main
     src: https://github.com/AvarianKnight/pma-voice
