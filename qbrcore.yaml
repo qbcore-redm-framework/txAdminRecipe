@@ -58,6 +58,11 @@ tasks:
     dest: ./resources/[standalone]/PolyZone
     ref: master
     src: https://github.com/nerohiro/PolyZone
+
+  - action: download_github
+    dest: ./resources/[standalone]/pma-voice
+    ref: main
+    src: https://github.com/AvarianKnight/pma-voice
     
   # Download QBCore resources
   - action: download_github
