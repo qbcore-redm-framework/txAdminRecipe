@@ -91,6 +91,11 @@ tasks:
     dest: ./resources/[qbr]/qbr-hud
 
   - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-interiors
+    ref: main
+    dest: ./resources/[qbr]/qbr-interiors
+    
+  - action: download_github
     src: https://github.com/qbcore-redm-framework/qbr-inventory
     ref: main
     dest: ./resources/[qbr]/qbr-inventory
