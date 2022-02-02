@@ -104,11 +104,6 @@ tasks:
     src: https://github.com/qbcore-redm-framework/qbr-inventory
     ref: main
     dest: ./resources/[qbr]/qbr-inventory
-
-  - action: download_github
-    src: https://github.com/qbcore-redm-framework/qbr-logs
-    ref: main
-    dest: ./resources/[qbr]/qbr-logs
     
   - action: download_github
     src: https://github.com/Sporny/qbr-menu
