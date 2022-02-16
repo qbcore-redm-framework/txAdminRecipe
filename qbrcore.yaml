@@ -2,8 +2,8 @@ $engine: 3
 $onesync: on
 name: QBCore Framework RedM
 version: 0.1.0
-author: BerkieB & SyZzO
-description: An advanced RedM RP framework including jobs, gangs, housing & more!
+author: The QBCore Family
+description: An advanced RedM framework including jobs, gangs, housing & more!
 
 tasks:
   # Download Base Files
@@ -63,6 +63,11 @@ tasks:
     dest: ./resources/[standalone]/pma-voice
     ref: main
     src: https://github.com/AvarianKnight/pma-voice
+
+  - action: download_github
+    dest: ./resources/[standalone]/menuv
+    ref: main
+    src: https://github.com/qbcore-redm-framework/menuv
     
   # Download QBCore resources
   - action: download_github
@@ -159,6 +164,11 @@ tasks:
     src: https://github.com/qbcore-redm-framework/qbr-lockpick
     ref: main
     dest: ./resources/[qbr]/qbr-lockpick
+    
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-adminmenu
+    ref: main
+    dest: ./resources/[qbr]/qbr-adminmenu
   
   # Clean up
   - action: remove_path
