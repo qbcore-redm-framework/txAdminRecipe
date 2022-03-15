@@ -169,6 +169,11 @@ tasks:
     src: https://github.com/qbcore-redm-framework/qbr-adminmenu
     ref: main
     dest: ./resources/[qbr]/qbr-adminmenu
+    
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-stables
+    ref: main
+    dest: ./resources/[qbr]/qbr-stables
   
   # Clean up
   - action: remove_path
