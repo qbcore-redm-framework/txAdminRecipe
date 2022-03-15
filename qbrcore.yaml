@@ -26,7 +26,7 @@ tasks:
     file: ./tmp/qbrcore/qbrcore.sql
 
 
-  # Downloading Standalone Resources
+  # Downloading Standalone Resources  
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
     subpath: resources
@@ -48,6 +48,11 @@ tasks:
     dest: ./resources/[standalone]/progressbar
     ref: main
     src: https://github.com/qbcore-redm-framework/progressbar
+    
+  - action: download_github
+    dest: ./resources/[standalone]/safecracker
+    ref: main
+    src: https://github.com/qbcore-redm-framework/safecracker
       
   - action: download_github
     dest: ./resources/[standalone]/notificationsystem
@@ -71,6 +76,11 @@ tasks:
     
   # Download QBCore resources
   - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-adminmenu
+    ref: main
+    dest: ./resources/[qbr]/qbr-adminmenu
+  
+  - action: download_github
     src: https://github.com/qbcore-redm-framework/qbr-ambulancejob
     ref: main
     dest: ./resources/[qbr]/qbr-ambulancejob
@@ -79,6 +89,11 @@ tasks:
     src: https://github.com/qbcore-redm-framework/qbr-banking
     ref: main
     dest: ./resources/[qbr]/qbr-banking
+    
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-clothing
+    ref: main
+    dest: ./resources/[qbr]/qbr-clothing
 
   - action: download_github
     src: https://github.com/qbcore-redm-framework/qbr-core
@@ -96,6 +111,11 @@ tasks:
     dest: ./resources/[qbr]/qbr-hud
     
   - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-input
+    ref: main
+    dest: ./resources/[qbr]/qbr-input
+    
+  - action: download_github
     src: https://github.com/qbcore-redm-framework/qbr-interiors
     ref: main
     dest: ./resources/[qbr]/qbr-interiors
@@ -104,6 +124,16 @@ tasks:
     src: https://github.com/qbcore-redm-framework/qbr-inventory
     ref: main
     dest: ./resources/[qbr]/qbr-inventory
+    
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-lockpick
+    ref: main
+    dest: ./resources/[qbr]/qbr-lockpick
+    
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-management
+    ref: main
+    dest: ./resources/[qbr]/qbr-management
     
   - action: download_github
     src: https://github.com/Sporny/qbr-menu
@@ -144,6 +174,11 @@ tasks:
     src: https://github.com/qbcore-redm-framework/qbr-spawn
     ref: main
     dest: ./resources/[qbr]/qbr-spawn
+    
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-stables
+    ref: main
+    dest: ./resources/[qbr]/qbr-stables
 
   - action: download_github
     src: https://github.com/qbcore-redm-framework/qbr-weapons
@@ -154,26 +189,6 @@ tasks:
     src: https://github.com/qbcore-redm-framework/qbr-weathersync
     ref: main
     dest: ./resources/[qbr]/qbr-weathersync
-
-  - action: download_github
-    src: https://github.com/qbcore-redm-framework/qbr-clothing
-    ref: main
-    dest: ./resources/[qbr]/qbr-clothing
-    
-  - action: download_github
-    src: https://github.com/qbcore-redm-framework/qbr-lockpick
-    ref: main
-    dest: ./resources/[qbr]/qbr-lockpick
-    
-  - action: download_github
-    src: https://github.com/qbcore-redm-framework/qbr-adminmenu
-    ref: main
-    dest: ./resources/[qbr]/qbr-adminmenu
-    
-  - action: download_github
-    src: https://github.com/qbcore-redm-framework/qbr-stables
-    ref: main
-    dest: ./resources/[qbr]/qbr-stables
   
   # Clean up
   - action: remove_path
