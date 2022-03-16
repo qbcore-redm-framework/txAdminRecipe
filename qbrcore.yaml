@@ -176,9 +176,9 @@ tasks:
     dest: ./resources/[qbr]/qbr-spawn
     
   - action: download_github
-    src: https://github.com/qbcore-redm-framework/qbr-stables
+    src: https://github.com/qbcore-redm-framework/qbr-stable
     ref: main
-    dest: ./resources/[qbr]/qbr-stables
+    dest: ./resources/[qbr]/qbr-stable
 
   - action: download_github
     src: https://github.com/qbcore-redm-framework/qbr-weapons
