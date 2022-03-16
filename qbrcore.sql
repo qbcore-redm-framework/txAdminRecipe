@@ -145,3 +145,13 @@ CREATE TABLE IF NOT EXISTS `trunkitems` (
   PRIMARY KEY (`plate`),
   KEY `id` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1;
+
+CREATE TABLE IF NOT EXISTS `management_menu` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `job_name` VARCHAR(50) NOT NULL,
+  `amount`  INT(100) NOT NULL,
+  `menu_type` ENUM('boss','gang') NOT NULL DEFAULT 'boss',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `job_name` (`job_name`),
+  KEY `menu_type` (`menu_type`)
+) ENGINE=InnoDB AUTO_INCREMENT=1;
