@@ -76,9 +76,9 @@ tasks:
 
   - action: download_github
     dest: ./resources/[standalone]/mediccamp
-    ref: master
+    ref: main
     src: https://github.com/qbcore-redm-framework/mediccamp
-    
+
   # Download QBCore resources
   - action: download_github
     src: https://github.com/qbcore-redm-framework/qbr-adminmenu
