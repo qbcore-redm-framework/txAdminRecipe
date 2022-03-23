@@ -73,6 +73,11 @@ tasks:
     dest: ./resources/[standalone]/menuv
     ref: master
     src: https://github.com/qbcore-redm-framework/menuv
+
+  - action: download_github
+    dest: ./resources/[standalone]/mediccamp
+    ref: master
+    src: https://github.com/qbcore-redm-framework/mediccamp
     
   # Download QBCore resources
   - action: download_github
