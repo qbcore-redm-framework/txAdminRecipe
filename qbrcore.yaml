@@ -53,11 +53,6 @@ tasks:
     dest: ./resources/[standalone]/safecracker
     ref: main
     src: https://github.com/qbcore-redm-framework/safecracker
-      
-  - action: download_github
-    dest: ./resources/[standalone]/notificationsystem
-    ref: main
-    src: https://github.com/qbcore-redm-framework/notificationsystem
     
   - action: download_github
     dest: ./resources/[standalone]/PolyZone
