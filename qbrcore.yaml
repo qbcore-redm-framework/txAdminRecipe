@@ -136,7 +136,7 @@ tasks:
     dest: ./resources/[qbr]/qbr-management
     
   - action: download_github
-    src: https://github.com/Sporny/qbr-menu
+    src: https://github.com/qbcore-redm-framework/qbr-menu
     ref: main
     dest: ./resources/[qbr]/qbr-menu
 
