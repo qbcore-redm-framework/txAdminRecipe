@@ -166,6 +166,11 @@ tasks:
     dest: ./resources/[qbr]/qbr-smallresources
 
   - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-target
+    ref: main
+    dest: ./resources/[qbr]/qbr-target
+
+  - action: download_github
     src: https://github.com/qbcore-redm-framework/qbr-spawn
     ref: main
     dest: ./resources/[qbr]/qbr-spawn
