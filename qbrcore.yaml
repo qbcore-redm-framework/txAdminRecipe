@@ -1,7 +1,7 @@
 $engine: 3
 $onesync: on
 name: QBCore Framework RedM
-version: 0.1.0
+version: 0.1.2
 author: The QBCore Family
 description: An advanced RedM framework including jobs, gangs, housing & more!
 
@@ -34,7 +34,7 @@ tasks:
   
   - action: download_file
     path: ./tmp/files/oxmysql.zip
-    url: https://github.com/overextended/oxmysql/releases/download/v2.7.5/oxmysql.zip
+    url: https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip
   - action: unzip
     dest: ./resources/[standalone]
     src: ./tmp/files/oxmysql.zip
@@ -184,6 +184,31 @@ tasks:
     src: https://github.com/qbcore-redm-framework/qbr-weapons
     ref: main
     dest: ./resources/[qbr]/qbr-weapons
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-mining
+    ref: main
+    dest: ./resources/[qbr]/qbr-mining
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-moonshine
+    ref: main
+    dest: ./resources/[qbr]/qbr-moonshine
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-farming
+    ref: main
+    dest: ./resources/[qbr]/qbr-farming
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-contraband
+    ref: main
+    dest: ./resources/[qbr]/qbr-contraband
+
+  - action: download_github
+    src: https://github.com/qbcore-redm-framework/qbr-hunting
+    ref: main
+    dest: ./resources/[qbr]/qbr-hunting
 
   - action: download_github
     src: https://github.com/qbcore-redm-framework/qbr-weathersync
